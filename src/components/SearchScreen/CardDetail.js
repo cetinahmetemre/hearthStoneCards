@@ -6,7 +6,7 @@ import CardFlip from 'react-native-card-flip';
 
 let {height, width} = Dimensions.get('window');
 
-class SearchScreen extends Component {
+class CardDetail extends Component {
 
     constructor(props){
         super(props)
@@ -154,4 +154,4 @@ const styles = StyleSheet.create({
 },
 });
 
-export default SearchScreen;
+export default CardDetail;
