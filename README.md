@@ -1,5 +1,5 @@
 # hearthStoneCards
-*** React Native Hearth Stone Cards Application ***
+** React Native Hearth Stone Cards Application **
 
 ```
 cd hearhStoneCards 
