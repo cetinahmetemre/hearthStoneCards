@@ -2,13 +2,15 @@ import React , {Component} from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore /* , applyMiddleware*/ } from 'redux';
+//import thunk from 'redux-thunk';
 import allReducers from './src/redux/reducer'
 import MechanicsScreen from './src/components/MechanicsScreen/MechanicsScreen';
 import CardsScreen from './src/components/CardsScreen/CardsScreen';
 import SearchScreen from './src/components/SearchScreen/SearchScreen';
 import CardDetail from './src/components/SearchScreen/CardDetail';
 
+//const store = createStore(allReducers,applyMiddleware(thunk));
 const store = createStore(allReducers);
 
 class App extends Component {
