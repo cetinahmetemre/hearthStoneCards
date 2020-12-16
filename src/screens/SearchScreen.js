@@ -1,8 +1,6 @@
 import React , {Component} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, FlatList, Image, Dimensions, ActivityIndicator, TextInput } from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
-import LinearGradient from 'react-native-linear-gradient';
-import CardFlip from 'react-native-card-flip';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import debounce from 'lodash/debounce';
 

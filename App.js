@@ -1,18 +1,11 @@
 import React , {Component} from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
 import { Provider } from 'react-redux';
-import { createStore /* , applyMiddleware*/ } from 'redux';
-//import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import allReducers from './src/redux/reducer'
-import MechanicsScreen from './src/components/MechanicsScreen/MechanicsScreen';
-import CardsScreen from './src/components/CardsScreen/CardsScreen';
-import SearchScreen from './src/components/SearchScreen/SearchScreen';
-import CardDetail from './src/components/SearchScreen/CardDetail';
+import MainNavigation from "./src/navigation/MainNavigation";
 
-//const store = createStore(allReducers,applyMiddleware(thunk));
-const store = createStore(allReducers);
-
+const store = createStore(allReducers,applyMiddleware(thunk));
 class App extends Component {
 
  constructor(props){
@@ -22,20 +15,11 @@ class App extends Component {
   render(){
     return (
       <Provider store={store}> 
-        <AppContainer />
+        <MainNavigation />
       </Provider>
     );
   }  
 
 }
-
-const RootStack = createStackNavigator(
-  {    
-    Mechanics:{screen:MechanicsScreen},
-    Cards:{screen:CardsScreen},
-    Search:{screen:SearchScreen},
-    CardDetail:{screen:CardDetail},
-  }, { initialRouteName:"Mechanics"});
-  const AppContainer = createAppContainer(RootStack);
 
 export default App;

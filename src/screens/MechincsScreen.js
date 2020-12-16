@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, FlatList, Image, Dimensions, ActivityIndicator,StatusBar } from 'react-native';
 import { connect } from 'react-redux';
-import { getMechanics, editCards } from '../../redux/action';
+import { getMechanics, editCards } from '../redux/action';
 import AutoHeightImage from 'react-native-auto-height-image';
 import LinearGradient from 'react-native-linear-gradient';
 import Ionicons from 'react-native-vector-icons/Ionicons';
